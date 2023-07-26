@@ -26,7 +26,7 @@ class FlutterFingerprintjsPlugin: FlutterPlugin, MethodCallHandler {
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         context = flutterPluginBinding.applicationContext
         handler = Handler(context.mainLooper)
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "fingerprintjs")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "flutter_fingerprintjs")
         channel.setMethodCallHandler(this)
     }
 
@@ -62,8 +62,8 @@ class FlutterFingerprintjsPlugin: FlutterPlugin, MethodCallHandler {
             result.error("-1", "init must be called first", "init must be called first")
             return
         }
-        fingerprinter?.getDeviceId(version = Fingerprinter.Version.V_5) { deviceId ->
-            handler.post { result.success(deviceId) }
+        fingerprinter?.getDeviceId(version = Fingerprinter.Version.V_5) { info ->
+            handler.post { result.success(info.deviceId) }
         }
     }
 
