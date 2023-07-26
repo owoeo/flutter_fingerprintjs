@@ -1,0 +1,33 @@
+PODS:
+  - FingerprintJS (1.4.0):
+    - FingerprintJS/Core (= 1.4.0)
+  - FingerprintJS/Core (1.4.0):
+    - FingerprintJS/SystemControl
+  - FingerprintJS/SystemControl (1.4.0)
+  - Flutter (1.0.0)
+  - flutter_fingerprintjs (0.0.1):
+    - FingerprintJS (= 1.4.0)
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_fingerprintjs (from `.symlinks/plugins/flutter_fingerprintjs/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FingerprintJS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_fingerprintjs:
+    :path: ".symlinks/plugins/flutter_fingerprintjs/ios"
+
+SPEC CHECKSUMS:
+  FingerprintJS: 432cf5edb18e4b8922a6290a7b803540bf5f4e3d
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_fingerprintjs: 6f1f7ce16000029a3635265b2ec520742dc2efe1
+
+PODFILE CHECKSUM: 4e8f8b2be68aeea4c0d5beb6ff1e79fface1d048
+
+COCOAPODS: 1.10.0
